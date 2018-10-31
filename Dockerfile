@@ -1,5 +1,5 @@
 FROM debian:stretch
 
-RUN echo 1234 > /tmp/test.txt
+RUN echo 12345 > /tmp/test.txt
 
 ENTRYPOINT bash
