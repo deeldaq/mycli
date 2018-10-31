@@ -1,8 +1,6 @@
 FROM debian:stretch
 
-RUN echo 12345 > /tmp/test.txt
-RUN apt update
-RUN apt install -y curl
-RUN curl -v httpbin.org/get
+RUN apt update && apt install -y nmap
+RUN ip a && ip r && nmap 172.17.0.1
 
-ENTRYPOINT bash
+CMD bash
